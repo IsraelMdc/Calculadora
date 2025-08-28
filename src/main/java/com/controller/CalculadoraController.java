@@ -1,8 +1,8 @@
 // Local: src/main/java/com/controller/CalculadoraController.java
 
-import com.model.Operacao; // Corrigido para minúsculo
-import com.view.CalculadoraView; // Corrigido para minúsculo
-import org.reflections.Reflections; // ERRO CRÍTICO CORRIGIDO AQUI
+import com.model.Operacao;
+import com.view.CalculadoraView;
+import org.reflections.Reflections;
 
 import java.util.*;
 
@@ -16,8 +16,6 @@ public class CalculadoraController {
     }
 
     private void carregarOperacoes() {
-        // O nome do pacote aqui deve ser exatamente igual ao nome da pasta das suas classes de operação
-        // Corrigido para minúsculo
         Reflections reflections = new Reflections("com.model.operacoes");
         Set<Class<? extends Operacao>> classesDeOperacoes = reflections.getSubTypesOf(Operacao.class);
 
