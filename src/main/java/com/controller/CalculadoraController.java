@@ -24,7 +24,7 @@ public class CalculadoraController {
         for (Class<? extends Operacao> classe : classesDeOperacoes) {
             try {
                 Operacao operacao = classe.getDeclaredConstructor().newInstance();
-                operacoesDisponiveis.put(Integer.valueOf(indice++), operacao);
+                operacoesDisponiveis.put(indice++, operacao);
             } catch (Exception e) {
                 view.mostrarErro("Não foi possível carregar a operação: " + classe.getName());
             }
