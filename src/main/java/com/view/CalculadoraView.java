@@ -1,4 +1,3 @@
-// Local: src/main/java/com/view/CalculadoraView.java
 package com.view;
 
 import java.util.List;

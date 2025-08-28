@@ -1,4 +1,4 @@
-// Local: src/main/java/com/controller/CalculadoraController.java
+package com.controller;
 
 import com.model.Operacao;
 import com.view.CalculadoraView;
@@ -16,6 +16,7 @@ public class CalculadoraController {
     }
 
     private void carregarOperacoes() {
+
         Reflections reflections = new Reflections("com.model.operacoes");
         Set<Class<? extends Operacao>> classesDeOperacoes = reflections.getSubTypesOf(Operacao.class);
 
@@ -23,7 +24,7 @@ public class CalculadoraController {
         for (Class<? extends Operacao> classe : classesDeOperacoes) {
             try {
                 Operacao operacao = classe.getDeclaredConstructor().newInstance();
-                operacoesDisponiveis.put(indice++, operacao);
+                operacoesDisponiveis.put(Integer.valueOf(indice++), operacao);
             } catch (Exception e) {
                 view.mostrarErro("Não foi possível carregar a operação: " + classe.getName());
             }

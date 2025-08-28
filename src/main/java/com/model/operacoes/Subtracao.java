@@ -1,4 +1,3 @@
-// Local: src/main/java/com/model/operacoes/Subtracao.java
 package com.model.operacoes;
 
 import com.model.Operacao;

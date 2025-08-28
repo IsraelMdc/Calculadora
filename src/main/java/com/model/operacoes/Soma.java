@@ -1,4 +1,3 @@
-// Local: src/main/java/com/suacalculadora/model/operacoes/Soma.java
 package com.model.operacoes;
 
 import com.model.Operacao;

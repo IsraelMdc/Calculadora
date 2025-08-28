@@ -1,4 +1,3 @@
-// Local: src/main/java/com/App.java
 package com;
 
 import com.controller.CalculadoraController;
